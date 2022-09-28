@@ -1,0 +1,59 @@
+.password {
+  input {
+    margin: 8px 0 0 0;
+  }
+  margin: 10px;
+}
+
+.instructions {
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  p {
+    margin: 0 0 5px 0;
+  }
+  margin: 0 0 10px 0;
+}
+
+.container {
+  transition: 0.15s ease-out;
+  input[type="radio"] {
+    &:checked + label {
+      border: 3px solid var(--bgBtn);
+      &::before {
+        margin: 0 0 5px 0;
+        display: flex;
+        content: "✅ Selected";
+      }
+    }
+  }
+  padding: 0 15px;
+}
+
+.albumBought {
+  display: flex;
+  flex-direction: column;
+  header {
+    :first-child {
+      font-weight: bold;
+      font-size: 1.25rem;
+    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  border: 1px solid white;
+  border-radius: 10px;
+  margin: 0 0 20px 0;
+  padding: 20px 10px;
+}
+
+.loading {
+  color: var(--bgBtn) !important;
+  text-align: center;
+  font-weight: bold;
+  p {
+    margin: 15px 0;
+  }
+}

@@ -1,0 +1,40 @@
+.container {
+  overflow: auto;
+  padding: 0px 20px;
+  height: 100%;
+}
+
+.search {
+  position: sticky;
+  top: 0;
+  padding: 10px;
+  background-color: var(--bgApp);
+}
+
+.dummie {
+  background-color: red;
+  height: 50px;
+  margin: 0 0 10px 0;
+}
+
+.article {
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 0 0 10px 0;
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  .actions {
+    margin: 10px 0;
+    display: flex;
+    button {
+      height: 30px;
+    }
+  }
+}

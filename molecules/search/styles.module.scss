@@ -1,0 +1,25 @@
+.search {
+  display: flex;
+  input {
+    border-radius: 5px 0 0 5px;
+    border-style: solid none solid solid;
+    height: 2.5rem;
+    padding: 0 10px;
+    outline: none;
+    width: 100%;
+  }
+
+  .clear {
+    border-radius: 0;
+    border-style: solid none solid none;
+    height: 2.5rem;
+    width: 40px;
+  }
+
+  button {
+    border-radius: 0 5px 5px 0;
+    border-style: solid solid solid none;
+    height: 2.5rem;
+    width: 40px;
+  }
+}

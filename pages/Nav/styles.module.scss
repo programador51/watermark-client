@@ -1,0 +1,31 @@
+.nav {
+  border: 1px solid red;
+  border-style: solid none none none;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  align-items: center;
+  justify-content: center;
+  // background-color: var(--bgApp);
+  button {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border: none;
+    background: none;
+    &:hover {
+      background: transparent;
+    }
+    a {
+      width: 50%;
+      height: 80%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      background-color: var(--bgBtn);
+      color: var(--btnColor);
+    }
+  }
+}

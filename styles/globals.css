@@ -1,26 +1,84 @@
+:root {
+  --bgApp: rgb(227, 227, 227);
+  --bgBtn: rgb(92, 41, 49);
+  --btnColor: rgb(227, 227, 227);
+  --linkColor: rgb(29, 29, 147);
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: var(--bgApp);
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+  text-decoration: underline;
+  color: var(--linkColor);
 }
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+.app {
+  display: grid;
+  grid-template-rows: 10% 80% 10%;
 }
 
 @media (prefers-color-scheme: dark) {
+  :root {
+    --bgApp: rgb(32, 32, 32);
+    --bgBtn: rgb(214, 154, 164);
+    --btnColor: white;
+    --linkColor: white;
+  }
+
   html {
     color-scheme: dark;
   }
   body {
     color: white;
-    background: black;
+    background: var(--bgApp);
+  }
+}
+
+@media screen and (min-width: 0px) {
+  .view .app {
+    height: 100vh;
+  }
+  .app {
+    /* background-color: yellow; */
+    grid-template-rows: 10% 80% 10%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .view {
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .view .app {
+    height: 85%;
+    width: 30vw;
+  }
+
+  .app {
+    /* background-color: red; */
+    border: 1px solid red;
+    border-radius: 20px;
   }
 }

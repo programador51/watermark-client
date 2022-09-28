@@ -1,0 +1,22 @@
+.container {
+  height: 100%;
+  overflow: auto;
+}
+
+.form {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  color: var(--btnColor);
+  background-color: var(--bgApp);
+  padding: 10px;
+}
+
+.loading {
+  color: var(--bgBtn);
+  text-align: center;
+  font-weight: bold;
+  border: 1px solid var(--bgBtn);
+  border-style: solid none solid none;
+  padding: 20px 0;
+}
