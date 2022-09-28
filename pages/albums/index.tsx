@@ -27,10 +27,8 @@ export default function Albums() {
               <span>📷 [{album.photos}]</span>
             </header>
             <p>
-              Kofi Link Shop:{" "}
-              <a href={album.kofiLinkShop} target={"_blank"}>
-                {album.kofiLinkShop}
-              </a>
+              Kofi Link Shop:
+              <a href={album.kofiLinkShop}>{album.kofiLinkShop}</a>
             </p>
             <div className={scss.actions}>
               <Button>📝</Button>

@@ -23,9 +23,12 @@ export default function Canva({
       <div style={{ display: "none" }}>
         <img
           alt={`canvas-for-the-image-${hook.canvas.file.name}`}
-          onLoad={(e) =>
-            hook.updateDimensionsImage(e.target.width, e.target.height)
-          }
+          onLoad={(e) => {
+            hook.updateDimensionsImage(
+              e.currentTarget.width,
+              e.currentTarget.height
+            );
+          }}
           src={hook.canvas.imageBlob}
         />
 
