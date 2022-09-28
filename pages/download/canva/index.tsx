@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import useWatermark from "../../../customHooks/useWatermak";
-import { PropsI } from "./types";
+import { PropsI } from "../../../types/types";
 
 export default function Canva({
   file,
