@@ -9,15 +9,24 @@ export default function useWatermark({
   onChange = () => {},
   title = uuidv4(),
 }: ParamsUseWatermark) {
-  const [canvas, setCanvas] = useState<CanvasI | undefined>({
-    idCanvas: uuidv4(),
-    imageBlob: URL.createObjectURL(file),
-    dimensions: {
-      width: 0,
-      height: 0,
-    },
-    file: file,
-  });
+  const [canvas, setCanvas] = useState<CanvasI | undefined>(undefined);
+
+  useEffect(() => {
+    setCanvas({
+      idCanvas: uuidv4(),
+      imageBlob: URL.createObjectURL(
+        new Blob([file], {
+          type: file.type,
+        })
+      ),
+      dimensions: {
+        width: 0,
+        height: 0,
+      },
+      file: file,
+    });
+  }, []);
+
   const [watermarked, setWatermarked] = useState<undefined | File>(undefined);
 
   useEffect(() => {

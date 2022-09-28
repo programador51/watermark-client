@@ -23,7 +23,7 @@ export default function Canva({
     <>
       <div style={{ display: "none" }}>
         <img
-          alt={`canvas-for-the-image-${hook.canvas.file.name}`}
+          alt={`canvas-for-the-image-${uuidv4()}}`}
           onLoad={(e) => {
             hook.updateDimensionsImage(
               e.currentTarget.width,
