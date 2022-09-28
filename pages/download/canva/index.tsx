@@ -2,12 +2,13 @@
 import React from "react";
 import useWatermark from "../../../customHooks/useWatermak";
 import { PropsI } from "../../../types/types";
+import { v4 as uuidv4 } from "uuid";
 
 export default function Canva({
   file,
   onChange = () => {},
   watermark,
-  title = window.crypto.randomUUID(),
+  title = uuidv4(),
 }: PropsI) {
   const hook = useWatermark({
     file,

@@ -28,7 +28,9 @@ export default function Albums() {
             </header>
             <p>
               Kofi Link Shop:
-              <a href={album.kofiLinkShop}>{album.kofiLinkShop}</a>
+              <a rel="noreferrer" target={"_blank"} href={album.kofiLinkShop}>
+                {album.kofiLinkShop}
+              </a>
             </p>
             <div className={scss.actions}>
               <Button>📝</Button>
