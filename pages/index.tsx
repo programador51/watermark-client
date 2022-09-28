@@ -6,7 +6,7 @@ import styles from "../styles/Home.module.css";
 const Home: NextPage = () => {
   return (
     <div>
-      <iframe
+      {/* <iframe
         id="kofiframe"
         src="https://ko-fi.com/joseluisperez18614/?hidefeed=true&widget=true&embed=true&preview=true"
         styles={
@@ -14,7 +14,7 @@ const Home: NextPage = () => {
         }
         height="712"
         title="joseluisperez18614"
-      ></iframe>
+      ></iframe> */}
     </div>
   );
 };
