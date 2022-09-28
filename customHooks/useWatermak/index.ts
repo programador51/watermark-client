@@ -1,16 +1,16 @@
 import { useState, useEffect } from "react";
 import * as mime from "mime-types";
-
+import { v4 as uuidv4 } from "uuid";
 import { CanvasI, ParamsUseWatermark } from "./types";
 
 export default function useWatermark({
   watermark = "",
   file,
   onChange = () => {},
-  title = window.crypto.randomUUID(),
+  title = uuidv4(),
 }: ParamsUseWatermark) {
   const [canvas, setCanvas] = useState<CanvasI | undefined>({
-    idCanvas: window.crypto.randomUUID(),
+    idCanvas: uuidv4(),
     imageBlob: URL.createObjectURL(file),
     dimensions: {
       width: 0,

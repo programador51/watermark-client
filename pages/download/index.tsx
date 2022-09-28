@@ -118,31 +118,6 @@ export default function Download({
       );
     }
 
-    // // Watermark them
-    // case 5: {
-    //   return (
-    //     <Provider value={{ ...hook }}>
-    //       {hook.files.map((unwatermarked, i) => (
-    //         <Canva
-    //           key={window.crypto.randomUUID()}
-    //           file={unwatermarked}
-    //           watermark={hook.uuidTransaction}
-    //           title={`${hook.title} - ${i + 1}`}
-    //         />
-    //       ))}
-    //     </Provider>
-    //   );
-    // }
-
-    // case 6: {
-    //   return (
-    //     <div>
-    //       <p>Your files are ready</p>
-    //       <Button>Download</Button>
-    //     </div>
-    //   );
-    // }
-
     default:
       return <p>Try to contact tech support: jperezo98@hotmail.com</p>;
   }

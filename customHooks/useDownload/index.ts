@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 import {
   downloadPhoto,
   getDownloadInfo,
@@ -91,12 +92,12 @@ export default function useDownload(
           ...state,
           files: unziped,
           step: 5,
-          title: album?.title || window.crypto.randomUUID(),
+          title: album?.title || uuidv4(),
         });
 
         onDownloaded({
           watermark: state.uuidTransaction,
-          title: album?.title || window.crypto.randomUUID(),
+          title: album?.title || uuidv4(),
           files: unziped,
         });
       }

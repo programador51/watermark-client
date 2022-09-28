@@ -1,7 +1,8 @@
 import { ZipReader, BlobReader, BlobWriter } from "@zip.js/zip.js";
 import * as mime from "mime-types";
-import FileSaver, { saveAs } from "file-saver";
+import FileSaver from "file-saver";
 import JSZip from "jszip";
+import { v4 as uuidv4 } from "uuid";
 
 /**
  * Unzip a file and get the first file on that .zip
@@ -47,7 +48,7 @@ export async function unzipFirstFilePasswored(
  */
 export async function compress(
   files: File[],
-  title = window.crypto.randomUUID(),
+  title = uuidv4(),
   downloadOnFinish = false
 ): Promise<Blob | undefined> {
   if (files.length === 0) return undefined;
