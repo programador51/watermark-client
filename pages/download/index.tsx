@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react";
+import React, { createContext } from "react";
 import Label from "../../atoms/label";
 import useDownload from "../../customHooks/useDownload";
 import { Button } from "../../molecules/button";
@@ -6,8 +6,8 @@ import Input from "../../molecules/input";
 import { Required } from "../../molecules/required";
 import scss from "./styles.module.scss";
 import Spinner from "../../molecules/spinner";
-import Canva from "./canva";
 import { OnDownloadedI } from "../../customHooks/useDownload/types";
+import Link from "next/link";
 
 const ContextDownload = createContext({});
 const { Provider } = ContextDownload;
@@ -39,6 +39,12 @@ export default function Download({
             >
               Download
             </Button>
+
+            <hr />
+            <div className={scss.recover}>
+              <p>Did you forget your payment transaction id ?</p>
+              <Link href={"/email"}>Recover your id clicking here</Link>
+            </div>
           </div>
         </Provider>
       );

@@ -1,4 +1,22 @@
 .header {
   background-color: var(--bgBtn);
   height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  a {
+    color: var(--btnColor);
+    display: flex;
+    align-items: center;
+    img {
+      margin: 0 10px 0 0;
+      height: 30px;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .header {
+    border-radius: 20px 20px 0 0;
+  }
 }

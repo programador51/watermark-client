@@ -1,11 +1,30 @@
 .nav {
-  border: 1px solid red;
+  svg {
+    max-width: 30px;
+  }
+
+  .item {
+    background-color: rgba(255, 255, 255, 0.226);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+    padding: 0px 15px;
+    border-radius: 10px;
+  }
+
+  background: rgba(255, 255, 255, 0.2);
+
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-style: solid none none none;
   display: grid;
-  grid-template-columns: repeat(2, 50%);
+  grid-template-columns: repeat(3, 33%);
   align-items: center;
   justify-content: center;
-  // background-color: var(--bgApp);
+
   button {
     text-align: center;
     display: flex;
@@ -29,3 +48,11 @@
     }
   }
 }
+
+@media screen and (min-width: 992px) {
+  .nav {
+    border-radius: 0 0 20px 20px;
+  }
+}
+
+/* From https://css.glass */

@@ -5,16 +5,24 @@ import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
   return (
-    <div>
-      {/* <iframe
+    <div
+      style={{
+        height: "100%",
+      }}
+    >
+      <iframe
         id="kofiframe"
         src="https://ko-fi.com/joseluisperez18614/?hidefeed=true&widget=true&embed=true&preview=true"
-        styles={
-          "border:none;width:100%;padding:4px;background:#f9f9f9;height:100%"
-        }
+        style={{
+          border: "none",
+          width: "100%",
+          padding: "4px",
+          background: "#f9f9f9",
+          height: "100%",
+        }}
         height="712"
         title="joseluisperez18614"
-      ></iframe> */}
+      ></iframe>
     </div>
   );
 };
