@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import * as mime from "mime-types";
 import { v4 as uuidv4 } from "uuid";
 import { CanvasI, ParamsUseWatermark } from "./types";
+import { saveAs } from "file-saver";
 
 export default function useWatermark({
   watermark = "",
@@ -29,9 +30,9 @@ export default function useWatermark({
 
   const [watermarked, setWatermarked] = useState<undefined | File>(undefined);
 
-  useEffect(() => {
-    if (watermarked !== undefined) onChange(watermarked);
-  }, [watermarked]);
+  // useEffect(() => {
+  //   if (watermarked !== undefined) onChange(watermarked);
+  // }, [watermarked]);
 
   useEffect(() => {
     (async function () {
@@ -83,6 +84,12 @@ export default function useWatermark({
       });
 
       setWatermarked(blobCanvas);
+      console.log(
+        "I must appear just once without crash... i guess",
+        blobCanvas.name
+      );
+      // saveAs(blobCanvas, blobCanvas.name);
+      onChange(blobCanvas);
     })();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [canvas]);
